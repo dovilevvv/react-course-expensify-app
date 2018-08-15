@@ -5,7 +5,7 @@ const app = express();
 const publicPath = path.join(__dirname, '../', 'public');
 
 // for haruki
-const port = process.enc.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 // use public directory to serve static assets
 app.use(express.static(publicPath));
