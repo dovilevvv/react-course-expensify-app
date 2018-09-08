@@ -9,7 +9,7 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
-process.env.NODE_ENV=proccess.env.NODE_ENV || 'development';
+process.env.NODE_ENV=process.env.NODE_ENV || 'development';
 
 if(process.env.NODE_ENV === 'test'){
     require('dotenv').config({path: '.env.test'});
