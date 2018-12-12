@@ -1,6 +1,7 @@
 import * as firebase from 'firebase'; // sukuria nauja variable is stuff
 //pvz.: import * as expensesActions from '../actions/expenses';
 
+
 const config = {
     apiKey: process.env.FIREBASE_API_KEY,
     authDomain: process.env.FIREBASE_AUTH_DOMAIN,
@@ -14,7 +15,9 @@ firebase.initializeApp(config);
 
 const database = firebase.database();
 
-export {firebase, database as default};
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+
+export {firebase, googleAuthProvider, database as default};
 
 // //child_remove
 // database.ref('expenses').on('child_removed', (snapshot) => {
